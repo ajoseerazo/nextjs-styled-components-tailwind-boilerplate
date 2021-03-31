@@ -4,11 +4,7 @@ import "../styles/index.css";
 import { ThemeProvider } from "styled-components";
 import { useRouter } from "next/router";
 
-const theme = {
-  colors: {
-    primary: "#0e74ff",
-  },
-};
+const theme = {};
 
 const AppWrapper = ({ Component, pageProps }) => {
   const router = useRouter();
@@ -16,7 +12,7 @@ const AppWrapper = ({ Component, pageProps }) => {
   useEffect(() => {
     const handleRouteChange = (url) => {
       console.log("App is changed to: ", url);
-      window.scrollTo(0, 0);
+      // window.scrollTo(0, 0);
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);
